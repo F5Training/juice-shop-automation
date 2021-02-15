@@ -1,0 +1,14 @@
+---
+
+- name: Install Juice-Shop
+  gather_facts: false
+  hosts: demo3
+  tasks:
+
+    - name: install juice-shop
+      raw: docker run -d -p 3000:3000 bkimminich/juice-shop
+      register: results
+
+    - name: debug
+      debug:
+        msg: "{{ results }}"
