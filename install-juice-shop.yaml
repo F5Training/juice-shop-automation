@@ -12,4 +12,5 @@
 
     - name: debug
       debug:
-        msg: "{{ results }}"
+        msg: "{{ ansible_play_hosts | map('extract', hostvars, 'results') | map(attribute='stdout_lines') | list }}"
+      run_once: yes
