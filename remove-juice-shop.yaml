@@ -1,0 +1,18 @@
+---
+
+- name: Remove Juice-Shop
+  gather_facts: false
+  hosts: NAP
+  tasks:
+
+    - name: stop juice-shop
+      raw: docker stop juice_shop
+      become: yes
+
+    - name: remove juice-shop
+      raw: docker rm juice_shop
+      become: yes
+
+    - name: delete juice-shop image
+      raw: docker rmi bkimminich/juice-shop
+      become: yes

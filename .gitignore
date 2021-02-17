@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 # ignore project file
 .collections
+*.bak

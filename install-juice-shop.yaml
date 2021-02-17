@@ -2,12 +2,13 @@
 
 - name: Install Juice-Shop
   gather_facts: false
-  hosts: demo3
+  hosts: NAP
   tasks:
 
     - name: install juice-shop
-      raw: docker run -d -p 3000:3000 bkimminich/juice-shop
+      raw: docker run -d --name juice_shop -p 3000:3000 bkimminich/juice-shop
       register: results
+      become: yes
 
     - name: debug
       debug:
