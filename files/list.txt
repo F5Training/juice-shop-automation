@@ -1,3 +1,0 @@
-Username,Password,FQDN
-student1,aisai4ei,ec2-204-236-175-82.us-west-1.compute.amazonaws.com
-student2,ifo9eigo,ec2-184-72-10-145.us-west-1.compute.amazonaws.com
